@@ -1,5 +1,5 @@
 import 'package:flame/game.dart';
-import 'package:flame_basic/presentations/screens/flame_sprite/simple_sprite_flame.dart';
+import 'package:flame_basic/presentations/screens/flame_basic/flame_sprite/simple_sprite_flame.dart';
 import 'package:flutter/cupertino.dart';
 
 class MyGame extends FlameGame {
