@@ -1,6 +1,8 @@
 import 'package:flame/game.dart';
 import 'package:flame_basic/presentations/screens/flame_basic/flame_sprite/simple_sprite_flame.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class MyGame extends FlameGame {
   @override
@@ -16,7 +18,15 @@ class MyGameWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GameWidget(game: MyGame());
+    return Scaffold(
+      body: GameWidget(game: MyGame()),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.pop();
+        },
+        child: const Icon(Icons.arrow_back),
+      ),
+    );
   }
 
 }
