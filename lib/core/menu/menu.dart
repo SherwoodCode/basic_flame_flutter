@@ -17,6 +17,11 @@ const appMenuItems = <MenuItems>[
   MenuItems(
       title: 'Sprite',
       subTitulo: 'Ejemplo de sprite',
-      link: '/game',
+      link: '/sprite',
       icon: Icons.image_aspect_ratio_outlined),
+  MenuItems(
+      title: 'Circle',
+      subTitulo: 'Canvas Circle example',
+      link: '/circle',
+      icon: Icons.circle_notifications_outlined),
 ];
