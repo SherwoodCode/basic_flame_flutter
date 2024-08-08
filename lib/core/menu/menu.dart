@@ -24,4 +24,9 @@ const appMenuItems = <MenuItems>[
       subTitulo: 'Canvas Circle example',
       link: '/circle',
       icon: Icons.circle_notifications_outlined),
+  MenuItems(
+      title: 'Rectantulo',
+      subTitulo: 'Canvas reactangule example',
+      link: '/rectangule',
+      icon: Icons.area_chart),
 ];
