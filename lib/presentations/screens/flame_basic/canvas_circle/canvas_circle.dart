@@ -6,19 +6,36 @@ import 'package:go_router/go_router.dart';
 
 class CanvasCircle extends PositionComponent {
   CanvasCircle() : super();
+  double ciclePosXY = 10;
 
   @override
   void render(Canvas canvas) {
-    canvas.drawCircle(const Offset(100, 100), 60.0, BasicPalette.blue.paint());
+    canvas.drawCircle(
+        Offset(ciclePosXY, ciclePosXY), 60.0, BasicPalette.blue.paint());
     super.render(canvas);
+  }
+
+  @override
+  void update(double dt) {
+    ciclePosXY++;
   }
 }
 
-class MyGame extends FlameGame {
+class MyGame extends Game {
+  late CanvasCircle canvasCircle;
+
+  MyGame() {
+    canvasCircle = CanvasCircle();
+  }
+
   @override
-  Future<void>? onLoad() async {
-    await add(CanvasCircle());
-    return super.onLoad();
+  void render(Canvas canvas) {
+    canvasCircle.render(canvas);
+  }
+
+  @override
+  void update(double dt) {
+    canvasCircle.update(dt);
   }
 }
 
